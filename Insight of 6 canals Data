@@ -1,0 +1,29 @@
+# Insight 1: Number of Active and Inactive Canals
+active_inactive_insight = f"There are {status_count['Active']} active canals and {status_count['Inactive']} inactive canals."
+
+# Insight 2: Canal with the Longest Construction Duration
+longest_construction = canal_df.loc[canal_df['Construction Duration (Months)'].idxmax()]
+longest_construction_insight = f"The canal with the longest construction duration is '{longest_construction['Canal Name']}' with a construction time of {longest_construction['Construction Duration (Time Taken for Construction)']}."
+
+# Insight 3: Canal with the Highest Water Flow
+highest_water_flow = canal_df.loc[canal_df['Water Flow (Discharge in cubic feet per second)'].idxmax()]
+highest_water_flow_insight = f"The canal with the highest water flow is '{highest_water_flow['Canal Name']}' with a discharge of {highest_water_flow['Water Flow (Discharge in cubic feet per second)']} cubic feet per second."
+
+# Insight 4: Canal with the Shortest Construction Duration
+shortest_construction = canal_df.loc[canal_df['Construction Duration (Months)'].idxmin()]
+shortest_construction_insight = f"The canal with the shortest construction duration is '{shortest_construction['Canal Name']}' with a construction time of {shortest_construction['Construction Duration (Time Taken for Construction)']}."
+
+# Insight 5: Average Water Flow Interpretation
+avg_water_flow_insight = f"The average water flow across all canals is {avg_water_flow:.2f} cubic feet per second."
+
+# Insight 6: Average Construction Duration Interpretation
+avg_construction_duration_insight = f"The average construction duration across all canals is {avg_construction_duration:.2f} months."
+
+# Print all insights
+print("\nInsights:\n")
+print(active_inactive_insight)
+print(longest_construction_insight)
+print(highest_water_flow_insight)
+print(shortest_construction_insight)
+print(avg_water_flow_insight)
+print(avg_construction_duration_insight
